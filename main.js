@@ -56,7 +56,7 @@ function setupDataChannel() {
 document.getElementById('join').onclick = () => {
   room = document.getElementById('room').value;
   if (!room) return alert('Enter a room name!');
-  ws = new WebSocket('wss://YOUR_RENDER_URL_HERE'); // <-- Replace with your Render.com WebSocket URL
+  ws = new WebSocket('wss://https://lcc360-us.onrender.com/'); // <-- Replace with your Render.com WebSocket URL
   ws.onopen = () => {
     ws.send(JSON.stringify({ type: 'join', room }));
     setupWebRTC(true);
